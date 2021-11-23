@@ -1,0 +1,21 @@
+dubbo:
+  # application:
+  #   name: iotcenter-erp-cunsumer
+  # protocols:
+  #   triple:
+  #     name: tri
+  #     port: 20000
+  registries:
+    demoNacos:
+      username: nacos
+      password: nacos
+      protocol: nacos
+      address: 127.0.0.1:8848
+  consumer:
+    references:
+      # you may refer to `Reference()` method defined in `protobuf/triple/helloworld.pb.go`
+      MaterialServiceClientImpl:
+        check: false
+        protocol: tri
+        # interface is for registry
+        interface: erp.MaterialService

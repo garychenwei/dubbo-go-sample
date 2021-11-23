@@ -1,0 +1,17 @@
+dubbo:
+  application:
+    name: iotcenter-erp-provider
+  protocols:
+    triple:
+      name: tri
+      port: 20000
+  registries:
+    demoNacos:
+      username: nacos
+      password: nacos
+      protocol: nacos
+      address: 127.0.0.1:8848
+  provider:
+    services:
+      MeterialProvider:
+        interface: erp.MaterialService
