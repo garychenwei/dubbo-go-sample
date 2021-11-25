@@ -1,0 +1,27 @@
+dubbo:
+  application:
+    name: iotcenter-erp-provider
+  protocols:
+    triple:
+      name: tri
+      port: 20000
+  registries:
+    demoNacos:
+      username: nacos
+      password: nacos
+      protocol: nacos
+      address: 127.0.0.1:8848
+  provider:
+    services:
+      MeterialProvider:
+        interface: erp.MaterialService
+        # 本服务开启auth
+        auth: true
+        # 启用auth filter，对请求进行验签
+        # filter:  "auth,tracing,accesslog"
+        filter:  "auth,myAttachmentFiler"
+        # 默认实现通过配置文件配置AK、SK
+        params:
+          .accessKeyId: "SYD8-23DF"
+          .secretAccessKey: "BSDY-FDF1"
+          # authenticator: "myDefaultAuthenticator"

@@ -16,3 +16,7 @@
 basic/api/cmd/cache
 basic/api/cmd/log
 basic/erp/cmd/log
+.vscode
+auth/api/cmd/cache
+auth/api/cmd/log
+auth/erp/cmd/log

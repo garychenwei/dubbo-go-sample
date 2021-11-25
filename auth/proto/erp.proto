@@ -1,0 +1,52 @@
+syntax = "proto3";
+package proto.erp;
+
+option go_package = "./;erp";
+
+// 材料服务
+service MaterialService {
+  rpc GetMeterial(GetMeterialRequest) returns(GetMeterialResponse){}
+}
+
+
+message GetMeterialRequest {
+  string name = 1;
+  int32 page = 2;
+  int32 size = 3;
+}
+
+message GetMeterialResponse {
+  int32 page = 1;
+  int32 size = 2;
+  int32 total = 3;
+  repeated Material records = 4;
+}
+
+message Material {
+  string id = 1;
+  string name = 2;
+  string producer = 3;
+  string unit = 4;
+}
+
+message MetarialStore {
+  string id = 1;
+  string metarialId = 2;
+  string amount = 3;
+}
+
+message MetarialPurchase {
+  string id = 1;
+  string metarialId = 2;
+  string amount = 3;
+  string unitPrice = 4;
+  string totalPrice = 5;
+  string buyer = 6;
+  uint64 buyTime = 7;
+}
+
+message Product {
+  string id = 1;
+  string name = 2;
+  
+}
