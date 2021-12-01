@@ -20,3 +20,10 @@ basic/erp/cmd/log
 auth/api/cmd/cache
 auth/api/cmd/log
 auth/erp/cmd/log
+configcenter/api/cmd/cache
+configcenter/api/cmd/log
+configcenter/erp/cmd/cache
+configcenter/erp/cmd/log
+tracing/api/cmd/cache
+tracing/api/cmd/log
+tracing/erp/cmd/log

@@ -86,7 +86,7 @@ package filter
 				consumer = v.([]string)[0]
 		}
 	 }
-	
+	 logger.Info("comm url=", url)
 	 if auth.IsEmpty(accessKeyId, false) || auth.IsEmpty(consumer, false) ||
 	 		auth.IsEmpty(requestTimestamp, false) || auth.IsEmpty(originSignature, false) {
 		 return errors.New("failed to authenticate your ak/sk, maybe the consumer has not enabled the auth")

@@ -1,0 +1,25 @@
+dubbo:
+  config-center:
+    protocol: nacos
+    username: nacos
+    password: nacos
+    address: 127.0.0.1:8848
+    data-id: dubbo-go-sample-configcenter-client
+
+
+# set in config center group is 'dubbo', dataid is 'dubbo-go-sample-configcenter-client'
+# dubbo:
+#   registries:
+#     demoNacos:
+#       username: nacos
+#       password: nacos
+#       protocol: nacos
+#       address: 127.0.0.1:8848
+#   consumer:
+#     references:
+#       # you may refer to `Reference()` method defined in `protobuf/triple/helloworld.pb.go`
+#       MaterialServiceClientImpl:
+#         check: false
+#         protocol: tri
+#         # interface is for registry
+#         interface: erp.MaterialService

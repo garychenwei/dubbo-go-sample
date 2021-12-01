@@ -1,0 +1,27 @@
+dubbo:
+  config-center:
+    protocol: nacos
+    username: nacos
+    password: nacos
+    address: 127.0.0.1:8848
+    data-id: dubbo-go-sample-configcenter-server
+
+
+# set in config center group is 'dubbo', dataid is 'dubbo-go-sample-configcenter-server'
+# dubbo:
+#   application:
+#     name: iotcenter-erp-provider
+#   protocols:
+#     triple:
+#       name: tri
+#       port: 20000
+#   registries:
+#     demoNacos:
+#       username: nacos
+#       password: nacos
+#       protocol: nacos
+#       address: 127.0.0.1:8848
+#   provider:
+#     services:
+#       MeterialProvider:
+#         interface: erp.MaterialService
